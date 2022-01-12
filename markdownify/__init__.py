@@ -218,7 +218,7 @@ class MarkdownConverter(object):
         title_part = ' "%s"' % title.replace('"', r'\"') if title else ''
         return '%s[%s](%s%s)%s' % (prefix, text, href, title_part, suffix) if href else text
 
-    convert_b = abstract_inline_conversion(lambda self: 2 * self.options['strong_em_symbol'])
+    convert_b = abstract_inline_conversion(lambda self: 1 * self.options['strong_em_symbol'])
 
     def convert_blockquote(self, el, text, convert_as_inline):
 
